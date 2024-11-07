@@ -1,0 +1,95 @@
+/* 设置页面背景色 */
+html {
+    background-color: rgb(4, 28, 54);
+}
+
+/* 游戏标题样式 */
+.Simon_Game {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Press Start 2P', cursive;  /* 使用像素风格字体 */
+    text-align: center;
+    margin-top: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* 添加文字阴影效果 */
+}
+
+/* 游戏容器布局 - 使用flex实现居中和2x2布局 */
+.game_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    flex-direction: column;  /* 垂直排列按钮行 */
+    gap: 1rem;              /* 行间距 */
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* 按钮行样式 - 水平排列按钮 */
+.btn-row {
+    display: flex;
+    gap: 1rem;  /* 按钮间距 */
+}
+
+/* 通用按钮基础样式 */
+.btn {
+    width: 8rem;
+    height: 8rem;
+    margin: 0;
+    border-radius: 20%;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5),
+                inset 0 0 10px rgba(255, 255, 255, 0.3);  /* 双层阴影创造立体感 */
+    cursor: pointer;
+    position: relative;
+    outline: 3px solid black;  /* 黑色外边框 */
+}
+
+/* 各个颜色按钮的特定样式 */
+#green_btn {
+    background-color: rgb(0, 128, 0);
+    border: 6px solid rgb(0, 90, 0);      /* 深色边框 */
+    box-shadow: inset -10px -10px 20px rgba(0, 0, 0, 0.5);  /* 内阴影 */
+}
+
+#red_btn {
+    background-color: rgb(255, 0, 0);
+    border: 6px solid rgb(180, 0, 0);
+    box-shadow: inset -10px -10px 20px rgba(0, 0, 0, 0.5);
+}
+
+#yellow_btn {
+    background-color: rgb(255, 255, 0);
+    border: 6px solid rgb(180, 180, 0);
+    box-shadow: inset -10px -10px 20px rgba(0, 0, 0, 0.5);
+}
+
+#blue_btn {
+    background-color: rgb(0, 0, 255);
+    border: 6px solid rgb(0, 0, 180);
+    box-shadow: inset -10px -10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* 按钮激活状态的通用样式 */
+.btn-active {
+    transform: scale(0.95);   /* 缩小效果 */
+    box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.3) !important;  /* 改变阴影深度 */
+}
+
+/* 各个按钮激活状态的颜色变化 */
+#green_btn.btn-active {
+    background-color: lightgreen;
+}
+
+#red_btn.btn-active {
+    background-color: #ff6666;
+}
+
+#yellow_btn.btn-active {
+    background-color: #ffff66;
+}
+
+#blue_btn.btn-active {
+    background-color: #6666ff;
+}
