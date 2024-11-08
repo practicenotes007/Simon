@@ -5,7 +5,9 @@
 ## 游戏演示
 
 <p align="center">
-  <img src="./images/simon.PNG" width="200" alt="Simon Game Demo">
+  <img src="./images/simon.PNG" width="100" alt="Simon Game Demo">
+  <br>
+  <a href="https://github.com/practicenotes007/Simon"> 在线演示 </a>
 </p>
 
 ## 功能特点
