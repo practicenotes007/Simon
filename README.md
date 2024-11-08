@@ -98,7 +98,7 @@ npm run docs
 
 ## 作者
 
-[practicenotes007] - [practicenotes007@163.com]
+[practicenotes007] - [practicenotes@163.com]
 
 ## 版本历史
 
