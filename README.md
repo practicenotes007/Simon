@@ -83,7 +83,7 @@ npm run docs
 - 遵循模块化设计原则
 - 使用 JSDoc 注释规范
 
-## 贡���
+## 贡献
 
 欢迎提交 Pull Request 或创建 Issue！
 
