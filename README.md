@@ -31,12 +31,66 @@
 git clone https://github.com/practicenotes007/Simon.git
 ```
 
-2. 打开项目目录
+2. 进入项目目录
 ```bash
 cd Simon
 ```
 
-3. 在浏览器中打开 `index.html` 文件
+3. 安装依赖
+```bash
+npm install
+```
+
+4. 启动本地服务器
+```bash
+npm start
+```
+
+5. 在浏览器中访问 `http://localhost:8080`
+
+## 部署
+
+### 开发环境
+
+1. 安装开发依赖
+```bash
+npm install
+```
+
+2. 启动开发服务器
+```bash
+npm start
+```
+
+3. 生成文档
+```bash
+npm run docs
+```
+
+### 生产环境
+
+1. 确保所有依赖已安装
+```bash
+npm install --production
+```
+
+2. 部署到静态文件服务器
+   - 将以下文件复制到服务器：
+     - index.html
+     - styles.css
+     - simon.js
+     - sounds/
+     - images/
+     - node_modules/jquery/dist/jquery.min.js
+
+## 依赖项
+
+### 生产依赖
+- jQuery: DOM 操作和事件处理
+
+### 开发依赖
+- http-server: 本地开发服务器
+- JSDoc: 文档生成工具
 
 ## 游戏规则
 

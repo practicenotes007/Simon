@@ -1,5 +1,26 @@
 {
+  "name": "simon-game",
+  "version": "0.1.0",
+  "description": "A classic Simon memory game implementation",
+  "main": "index.html",
   "scripts": {
-    "docs": "jsdoc -c jsdoc.json"
+    "start": "http-server -p 8080",
+    "docs": "jsdoc -c jsdoc.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "simon",
+    "game",
+    "memory",
+    "javascript"
+  ],
+  "author": "practicenotes007",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "jsdoc": "^4.0.2"
   }
 } 
