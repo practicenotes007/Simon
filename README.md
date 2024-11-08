@@ -7,7 +7,7 @@
 <p align="center">
   <img src="./images/simon.PNG" width="100" alt="Simon Game Demo">
   <br>
-  <a href="https://github.com/practicenotes007/Simon"> 在线演示 </a>
+  <a href="https://practicenotes007.github.io/Simon/"> 在线演示 </a>
 </p>
 
 ## 功能特点
