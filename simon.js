@@ -14,6 +14,10 @@ $(".btn").on("click", function() {
     
     // 添加激活状态的class，触发按钮按下的视觉效果
     $btn.addClass("btn-active");
+
+    // 创建音频对象并播放音频
+    const sound = new Audio($btn.attr("bg_sound"));
+    sound.play();
     
     /**
      * 延时移除按钮激活状态
