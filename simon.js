@@ -1,30 +1,56 @@
 /**
- * Simon游戏的按钮交互逻辑
- * 为所有游戏按钮添加点击效果
- * 
- * @listens click - 监听.btn元素的点击事件
- * @requires jQuery
+ * Simon游戏模块
+ * @namespace
  */
-$(".btn").on("click", function() {
+const SimonGame = {
     /**
-     * 被点击的按钮jQuery对象
-     * @type {jQuery}
+     * 游戏状态标志
+     * @type {boolean}
+     * @private
      */
-    const $btn = $(this);
-    
-    // 添加激活状态的class，触发按钮按下的视觉效果
-    $btn.addClass("btn-active");
+    _gameStarted: false,
 
-    // 创建音频对象并播放音频
-    const sound = new Audio($btn.attr("bg_sound"));
-    sound.play();
-    
     /**
-     * 延时移除按钮激活状态
-     * @param {Function} callback - 移除btn-active类的回调函数
-     * @param {number} delay - 延迟时间（毫秒）
+     * 初始化游戏
+     * 设置事件监听器
+     * @public
      */
-    setTimeout(() => {
-        $btn.removeClass("btn-active");
-    }, 200);
-});
+    init: function() {
+        this._setupButtonListeners();
+        this._setupGameStart();
+    },
+
+    /**
+     * 设置按钮点击事件监听
+     * @private
+     */
+    _setupButtonListeners: function() {
+        $(".btn").on("click", (event) => {
+            if (!this._gameStarted) return;
+            
+            const $btn = $(event.currentTarget);
+            $btn.addClass("btn-active");
+            
+            const sound = new Audio($btn.attr("bg_sound"));
+            sound.play();
+            
+            setTimeout(() => {
+                $btn.removeClass("btn-active");
+            }, 200);
+        });
+    },
+
+    /**
+     * 设置游戏启动事件监听
+     * @private
+     */
+    _setupGameStart: function() {
+        $(document).on("keypress", () => {
+            this._gameStarted = true;
+            game.start();
+        });
+    }
+};
+
+// 在页面加载完成后初始化游戏
+$(window).on("load", () => SimonGame.init());
